@@ -8,7 +8,7 @@ This guide covers both **solo mining** and **pool mining** for XeChain. You can 
 
 1. **XeChain Node**  
    - You must have a running XeChain node for **solo mining**.  
-   - Refer to the [XeChain Node Setup](https://github.com/XeChain/xe-core) guide to compile or download the latest node binary.
+   - Refer to the [XeChain Node Setup](https://github.com/XeChain/docs/blob/main/node-setup.md) guide to compile or download the latest node binary.
    
 2. **xeMiner**  
    - Clone and compile, or download the pre-built miner from:  
@@ -69,7 +69,7 @@ For pool mining, you connect your miner to a remote pool instead of running your
 ## 5. Additional Resources
 
 - [xeMiner GitHub Repository](https://github.com/XeChain/xeMiner)
-- [XeChain Node Setup Guide](https://github.com/XeChain/xe-core)
-- [XeChain Official Documentation](#) *(Add official docs link here if available)*  
+- [XeChain GitHub Repository](https://github.com/XeChain/xe-core)
+- [XeChain Official Website](https://xechain.org/)  
 
 Happy Mining!
