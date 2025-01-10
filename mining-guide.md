@@ -23,7 +23,7 @@ Solo mining means your XeChain node will generate new blocks with your miner.
 
 1. **Start the XeChain node with WebSocket and mining APIs enabled**  
    ```bash
-   ./xe --ws --ws.port 8545 --ws.api admin,personal,eth,net,web3,miner --miner.etherbase 0xYourWalletAddress
+   ./xe --ws --ws.port 8545 --ws.api admin,personal,eth,net,web3,miner --mine --miner.etherbase 0xYourWalletAddress
    ```
    - `--ws` enables WebSocket connections.
    - `--ws.port 8545` sets the WebSocket port (you can pick another port if needed).
