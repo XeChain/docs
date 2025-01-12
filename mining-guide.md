@@ -25,19 +25,26 @@ Solo mining means your XeChain node will generate new blocks with your miner.
    ```bash
    ./xe --ws --ws.port 8546 --ws.api admin,personal,eth,net,web3,miner --mine --miner.etherbase 0xYourWalletAddress
    ```
-   - `--ws` enables WebSocket connections.
-   - `--ws.port 8546` sets the WebSocket port (you can pick another port if needed).
-   - `--ws.api admin,personal,eth,net,web3,miner` enables the relevant APIs for mining.
-   - `--mine` enables mining on node.
+   - `--ws` enables WebSocket connections.  
+   - `--ws.port 8546` sets the WebSocket port (you can pick another port if needed).  
+   - `--ws.api admin,personal,eth,net,web3,miner` enables the relevant APIs for mining.  
+   - `--mine` enables mining on the node.  
    - `--miner.etherbase 0xYourWalletAddress` sets the payout address (mining rewards go here).
 
-2. **Run the miner against your local node**  
+   **Update for external connections:**  
+   If your node and miner are on different machines—or you want to connect to your node from a remote miner—you need to allow external connections. Add:  
+   ```bash
+   --ws.addr 0.0.0.0 --ws.origins "*"
+   ```
+   This ensures your node listens on all interfaces (`0.0.0.0`) and accepts WebSocket connections from any origin (`--ws.origins "*"`). Without these flags, the node may refuse the connection.
+
+2. **Run the miner against your local (or external) node**  
    ```bash
    ./xeMiner -user=username -pass=password -pool=ws://localhost:8546
    ```
    - `-user` and `-pass` can be any username/password you want.  
-   - `-pool=ws://localhost:8546` tells `xeMiner` to use your local XeChain node via the WebSocket connection.
-   - The mining rewards will be sent to the address specified by `--miner.etherbase`.
+   - `-pool=ws://localhost:8546` tells `xeMiner` to use your (local or external) XeChain node via the WebSocket connection.  
+   - The mining rewards will be sent to the address specified by `--miner.etherbase` on the node.
 
 ---
 
